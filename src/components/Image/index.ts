@@ -1,1 +1,1 @@
-export {SquareImg, SquareContainedImg} from "./Image.styles"
+export { SquareImg, SquareContainedImg } from "./Image.styles"

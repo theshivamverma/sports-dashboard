@@ -10,14 +10,12 @@ type FlexContainerProps = {
   borderRadius?: string;
 }
 
-type CustomSizeProps = {
-  width: string;
-  height: string;
+type CustomSizeProps = CommonCompProps & {
+  width?: string;
+  height?: string;
 }
 
-type ContainerProps = CommonCompProps & {
-
-}
+type ContainerProps = CommonCompProps & {}
 
 export const DashboardContainer = styled.main`
   display: flex;
@@ -44,6 +42,12 @@ export const CustomSizeContainer = styled.div<CustomSizeProps>`
   height: ${(props) => props.height};
 `;
 
+export const CustomSizeFlexContainer = styled(FlexContainer)<CustomSizeProps>`
+  ${(props) => props.useUtilsCss && commonStyles};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
+
 export const RoundedImgContainer = styled(CustomSizeContainer)`
   border-radius: 50%;
   overflow: hidden;
@@ -52,6 +56,33 @@ export const RoundedImgContainer = styled(CustomSizeContainer)`
 
 export const IconContainer = styled.div<{ isActive: boolean }>`
   transform: rotate(${(props) => props.isActive ? '180deg' : '0deg'});
+`
+
+export const RoundIconContainer = styled.div<CustomSizeProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  border-radius: 50%;
+  border: 2px solid ${(props) => props.theme.colors.gray2};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const Badge = styled.span`
+  width: 18px;
+  height: 18px;
+  background-color: ${(props) => props.theme.colors.red};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  color: #fff;
+  font-weight: 400;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 `
 
 export const SubItemsContainer = styled.div`

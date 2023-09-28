@@ -6,3 +6,5 @@ export { default as ChevronDown } from "./ChevronDown";
 export { default as Heart } from "./Heart";
 export { default as Support } from "./Support";
 export { default as Logout } from "./Logout";
+export { default as Notification } from "./Notification";
+export { default as Settings } from "./Settings";

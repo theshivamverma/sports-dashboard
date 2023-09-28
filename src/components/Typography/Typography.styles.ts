@@ -9,6 +9,7 @@ type FontProps = CommonCompProps & {
 export const Header1 = styled.h1<FontProps>`
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.theme.colors.primaryFontColor};
+  font-weight: 600;
 `;
 
 export const Header2 = styled.h2<FontProps>`

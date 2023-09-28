@@ -5,5 +5,8 @@ export {
   SubItemsContainer,
   CustomSizeContainer,
   RoundedImgContainer,
-  IconContainer
+  IconContainer,
+  RoundIconContainer,
+  CustomSizeFlexContainer,
+  Badge
 } from "./Container.styles";
