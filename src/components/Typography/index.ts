@@ -1,0 +1,1 @@
+export {Header1, Header2, CustomHeader2, GrayText} from "./Typography.styles"

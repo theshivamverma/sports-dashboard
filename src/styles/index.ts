@@ -1,4 +1,6 @@
-import { DefaultTheme, createGlobalStyle } from "styled-components";
+import { DefaultTheme, createGlobalStyle, css } from "styled-components";
+import { CommonCompProps } from "../utils/types";
+
 
 export const theme: DefaultTheme = {
   colors: {
@@ -24,4 +26,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
+`;
+
+export const commonStyles = css<CommonCompProps>`
+  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin};
 `;

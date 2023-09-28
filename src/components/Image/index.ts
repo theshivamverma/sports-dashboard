@@ -1,0 +1,1 @@
+export {SquareImg, SquareContainedImg} from "./Image.styles"
