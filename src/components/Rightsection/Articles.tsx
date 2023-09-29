@@ -12,12 +12,10 @@ const DashboardArticles: React.FC = () => {
         Latest Article
       </CustomText>
       {blogs.map(({ title, dateTime, imageAddress }) => (
-        <FlexContainer padding="0.5rem" margin="0.5rem 0" alignItems="center">
+        <FlexContainer padding="0.5rem" margin="0.5rem 0" alignItems="center" key={dateTime}>
           <SquircleImgContainer
             width="80px"
-            height="80px"
-            useUtilsCss
-            borderRadius="1rem"
+            height="60px"
           >
             <SquareImg src={imageAddress} />
           </SquircleImgContainer>

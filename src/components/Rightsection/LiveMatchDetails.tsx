@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom"
 import { LiveMatchDetails, ScorePill } from './Rightsection.styles'
 import { CustomText, GrayText, Text } from '../Typography'
 import { useDashboard } from '../../context'
 import { MatchData } from '../../utils/constant'
 import { CustomSizeContainer, CustomSizeFlexContainer } from '../Container'
 import { SquareContainedImg } from '../Image'
-import { PrimaryButton } from '../Button'
+import { PrimaryButton } from '../Button';
 
 const DashboardLiveMatch: React.FC = () => {
 
@@ -43,14 +44,16 @@ const DashboardLiveMatch: React.FC = () => {
           </CustomText>
         </CustomSizeFlexContainer>
       </CustomSizeFlexContainer>
-      <PrimaryButton
-        useUtilsCss
-        width="100%"
-        fontSize="1.1rem"
-        padding="1rem !important"
-      >
-        Match Detail
-      </PrimaryButton>
+      <Link to="/details">
+        <PrimaryButton
+          useUtilsCss
+          width="100%"
+          fontSize="1.1rem"
+          padding="1rem !important"
+        >
+          Match Detail
+        </PrimaryButton>
+      </Link>
     </LiveMatchDetails>
   );
 }

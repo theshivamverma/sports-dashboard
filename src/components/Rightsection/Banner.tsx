@@ -18,7 +18,7 @@ const DashboardBanner: React.FC = () => {
         alignItems="center"
         padding="0.5rem 0"
       >
-        <Calendar />
+        <Calendar size={20} />
         <CustomText
           useUtilsCss
           padding="0 0 0 0.5rem"
@@ -29,7 +29,7 @@ const DashboardBanner: React.FC = () => {
         </CustomText>
       </CustomSizeFlexContainer>
       <FlexContainer alignItems="center" padding="0.5rem 0">
-        <Stadium />
+        <Stadium size={20} />
         <CustomText
           useUtilsCss
           padding="0 0 0 0.5rem"

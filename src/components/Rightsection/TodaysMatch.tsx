@@ -1,5 +1,5 @@
 import React from "react";
-import { MatchContainer, MatchItem, ScorePill, TodaysMatch } from "./Rightsection.styles";
+import { Dot, MatchContainer, MatchItem, ScorePill, TodaysMatch } from "./Rightsection.styles";
 import { CustomText, GrayText, Text } from "../Typography";
 import { MatchData } from "../../utils/constant";
 import { useDashboard } from "../../context";
@@ -18,7 +18,7 @@ import { theme } from "../../styles";
 const colors: Record<string, string> = theme.colors;
 
 const DashboardTodaysMatch: React.FC = () => {
-  const { activeMenuItem } = useDashboard();
+  const { activeMenuItem, setIsModalOpen } = useDashboard();
   const { localValues, updateData } = useLocalStorage();
 
   const todaysMatchData = MatchData[activeMenuItem]?.todaysMatch ?? MatchData["111"]["todaysMatch"];
@@ -50,10 +50,25 @@ const DashboardTodaysMatch: React.FC = () => {
                   <SquareContainedImg src={leagueLogo} />
                 </RoundedImgContainer>
                 <Container useUtilsCss margin="0 0 0 0.5rem">
-                  <Text fontSize="0.9rem">{leagueName}</Text>
-                  <GrayText fontSize="0.7rem" useUtilsCss margin="0.5rem 0 0 0">
-                    {description}
-                  </GrayText>
+                  <Text fontSize="0.9rem">{leagueName}</Text>\
+                  <FlexContainer alignItems="center">
+                    <GrayText
+                      fontSize="0.7rem"
+                      useUtilsCss
+                      margin="0.5rem 0 0 0"
+                    >
+                      {description}
+                    </GrayText>
+                    <Dot />
+                    <GrayText
+                      fontSize="0.7rem"
+                      useUtilsCss
+                      margin="0.5rem 0 0 0"
+                    >
+                      {matchData.length} Matches
+                    </GrayText>
+                  </FlexContainer>
+                  
                 </Container>
               </FlexContainer>
               <ChevronDown />
@@ -141,8 +156,15 @@ const DashboardTodaysMatch: React.FC = () => {
                         </RoundedImgContainer>
                       </CustomSizeFlexContainer>
                     </CustomSizeFlexContainer>
-                    <CustomSizeFlexContainer width="10%" justify="space-between">
-                      <IconButton width="30px" height="30px">
+                    <CustomSizeFlexContainer
+                      width="10%"
+                      justify="space-between"
+                    >
+                      <IconButton
+                        width="30px"
+                        height="30px"
+                        onClick={() => setIsModalOpen(true)}
+                      >
                         <Chart color={colors["gray4"]} size={20} />
                       </IconButton>
                       <IconButton width="30px" height="30px">

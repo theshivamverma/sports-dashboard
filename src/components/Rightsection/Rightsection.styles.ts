@@ -64,6 +64,16 @@ export const ScorePill = styled.span<CommonCompProps>`
   ${(props) => props.useUtilsCss && commonStyles};
 `;
 
+export const Dot = styled.span`
+  width: 3px;
+  height: 3px;
+  background-color: ${(props) => props.theme.colors.gray4};
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  margin-top: 8px;
+`
+
 export const LiveMatchDetails = styled.div`
   padding: 1.5rem;
   border-radius: 1rem;

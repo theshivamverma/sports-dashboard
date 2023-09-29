@@ -24,6 +24,7 @@ export const DashboardContainer = styled.main`
   display: flex;
   width: 100%;
   min-height: 100vh;
+  position: relative;
 `
 
 export const Container = styled.div<ContainerProps>`
@@ -62,7 +63,7 @@ export const RoundedImgContainer = styled(CustomSizeContainer)`
 `
 
 export const SquircleImgContainer = styled(CustomSizeContainer)`
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background-color: ${(props) => props.bgColor};
 `;
@@ -112,3 +113,17 @@ export const SubItemsContainer = styled.div`
   padding-left: 1rem;
   border-left: 2px solid ${(props) => props.theme.colors.gray2};
 `
+
+export const PageContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  background: "#25262C";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ChartContainer = styled.div`
+  width: 80%;
+`;

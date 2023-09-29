@@ -1,15 +1,19 @@
 import { ThemeProvider } from "styled-components"
+import { Route, Routes } from "react-router";
 import { GlobalStyle, theme } from "./styles"
-import { Home } from "./pages"
+import { Details, Home } from "./pages"
 
 function App() {
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
+      </Routes>
     </ThemeProvider>
-  )
+  );
 }
 
 export default App
