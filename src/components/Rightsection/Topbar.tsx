@@ -10,13 +10,14 @@ import {
 } from "../Container";
 import { ChevronDown, Notification, Settings } from "../../assets/icons";
 import { SquareImg } from "../Image";
+import { IconButton } from "../Button";
 
 const DashboardTopbar: React.FC = () => {
   return (
     <Topbar>
       <Container>
         <Header1 fontSize="2rem">Welcome, Stacia!</Header1>
-        <GrayText useUtilsCss fontSize="0.8rem" padding="0.5rem 0 0 0">
+        <GrayText useUtilsCss fontSize="1rem" padding="0.5rem 0 0 0">
           Today is sports day
         </GrayText>
       </Container>
@@ -30,13 +31,17 @@ const DashboardTopbar: React.FC = () => {
           alignItems="center"
           justify="space-between"
         >
-          <RoundIconContainer width="40px" height="40px">
-            <Notification size={20} />
-            <Badge>4</Badge>
-          </RoundIconContainer>
-          <RoundIconContainer width="40px" height="40px">
-            <Settings size={20} />
-          </RoundIconContainer>
+          <IconButton>
+            <RoundIconContainer width="40px" height="40px">
+              <Notification size={20} />
+              <Badge>4</Badge>
+            </RoundIconContainer>
+          </IconButton>
+          <IconButton>
+            <RoundIconContainer width="40px" height="40px">
+              <Settings size={20} />
+            </RoundIconContainer>
+          </IconButton>
         </CustomSizeFlexContainer>
         <Line />
         <CustomSizeFlexContainer

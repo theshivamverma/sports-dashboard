@@ -1,6 +1,6 @@
 import React from "react";
 import { Banner } from "./Rightsection.styles";
-import { CustomText, Text } from "../Typography";
+import { CustomText } from "../Typography";
 import { CustomSizeContainer, CustomSizeFlexContainer, FlexContainer } from "../Container";
 import { ArrowRight, Calendar, Stadium } from "../../assets/icons";
 import { SecondaryButton } from "../Button";

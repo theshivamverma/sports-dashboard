@@ -21,9 +21,9 @@ const DashboardArticles: React.FC = () => {
           >
             <SquareImg src={imageAddress} />
           </SquircleImgContainer>
-          <CustomSizeContainer useUtilsCss margin="0 0 0 0.5rem">
+          <CustomSizeContainer useUtilsCss margin="0 0 0 1rem">
             <CustomText fontSize="1rem">{title}</CustomText>
-            <GrayText fontSize="0.9rem" useUtilsCss margin="0.5rem 0 0 0">{dateTime}</GrayText>
+            <GrayText fontSize="0.9rem" fontWeight={300} useUtilsCss margin="0.5rem 0 0 0">{dateTime}</GrayText>
           </CustomSizeContainer>
         </FlexContainer>
       ))}

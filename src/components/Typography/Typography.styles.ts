@@ -4,6 +4,7 @@ import { commonStyles } from "../../styles";
 
 type FontProps = CommonCompProps & {
   fontSize?: string;
+  fontWeight?: number;
 };
 
 export const Header1 = styled.h1<FontProps>`
@@ -19,7 +20,7 @@ export const Text = styled.p<FontProps>`
   color: ${(props) => props.theme.colors.primaryFontColor};
 `;
 
-export const CustomText = styled(Text)<{ color?: string; fontWeight?: number }>`
+export const CustomText = styled(Text)<{ color?: string; }>`
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight};
 `;
@@ -28,4 +29,5 @@ export const GrayText = styled.p<FontProps>`
   ${(props) => props.useUtilsCss && commonStyles};
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.theme.colors.secondaryFontColor};
+  font-weight: ${(props) => props.fontWeight};
 `;
