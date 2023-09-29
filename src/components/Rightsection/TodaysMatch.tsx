@@ -1,5 +1,5 @@
 import React from "react";
-import { Dot, MatchContainer, MatchItem, ScorePill, TodaysMatch } from "./Rightsection.styles";
+import { MatchContainer, MatchItem, TodaysMatch } from "./Rightsection.styles";
 import { CustomText, GrayText, Text } from "../Typography";
 import { MatchData } from "../../utils/constant";
 import { useDashboard } from "../../context";
@@ -14,6 +14,7 @@ import { Chart, ChevronDown, Layout, StarFilled, StarOutlined } from "../../asse
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { IconButton } from "../Button";
 import { theme } from "../../styles";
+import { Dot, ScorePill } from "../utils";
 
 const colors: Record<string, string> = theme.colors;
 

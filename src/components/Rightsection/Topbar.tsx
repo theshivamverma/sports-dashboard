@@ -1,8 +1,7 @@
 import React from "react";
-import { Line, Topbar } from "./Rightsection.styles";
+import { Topbar } from "./Rightsection.styles";
 import { GrayText, Header1, Text } from "../Typography";
 import {
-  Badge,
   Container,
   CustomSizeFlexContainer,
   RoundIconContainer,
@@ -11,6 +10,7 @@ import {
 import { ChevronDown, Notification, Settings } from "../../assets/icons";
 import { SquareImg } from "../Image";
 import { IconButton } from "../Button";
+import { Badge, Line } from "../utils";
 
 const DashboardTopbar: React.FC = () => {
   return (

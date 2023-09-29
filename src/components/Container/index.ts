@@ -9,7 +9,6 @@ export {
   IconContainer,
   RoundIconContainer,
   CustomSizeFlexContainer,
-  Badge,
   PageContainer,
   ChartContainer
 } from "./Container.styles";

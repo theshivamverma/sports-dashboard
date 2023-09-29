@@ -91,22 +91,6 @@ export const RoundIconFilledContainer = styled(RoundIconContainer)<{
   background-color: ${(props) => props.bgColor};
 `;
 
-export const Badge = styled.span`
-  width: 18px;
-  height: 18px;
-  background-color: ${(props) => props.theme.colors.red};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 0.6rem;
-  color: #fff;
-  font-weight: 400;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-`
-
 export const SubItemsContainer = styled.div`
   margin: 1rem 0 0.5rem 0;
   margin-left: 2.2rem;

@@ -1,12 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom"
-import { LiveMatchDetails, ScorePill } from './Rightsection.styles'
+import { LiveMatchDetails } from './Rightsection.styles'
 import { CustomText, GrayText, Text } from '../Typography'
 import { useDashboard } from '../../context'
 import { MatchData } from '../../utils/constant'
 import { CustomSizeContainer, CustomSizeFlexContainer } from '../Container'
 import { SquareContainedImg } from '../Image'
 import { PrimaryButton } from '../Button';
+import { StyledLink, ScorePill } from '../utils';
 
 const DashboardLiveMatch: React.FC = () => {
 
@@ -44,7 +44,7 @@ const DashboardLiveMatch: React.FC = () => {
           </CustomText>
         </CustomSizeFlexContainer>
       </CustomSizeFlexContainer>
-      <Link to="/details">
+      <StyledLink to="/details">
         <PrimaryButton
           useUtilsCss
           width="100%"
@@ -53,7 +53,7 @@ const DashboardLiveMatch: React.FC = () => {
         >
           Match Detail
         </PrimaryButton>
-      </Link>
+      </StyledLink>
     </LiveMatchDetails>
   );
 }
