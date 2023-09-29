@@ -1,6 +1,6 @@
 import React from "react";
 import { Line, Topbar } from "./Rightsection.styles";
-import { GrayText, Header1, Header2 } from "../Typography";
+import { GrayText, Header1, Text } from "../Typography";
 import {
   Badge,
   Container,
@@ -46,12 +46,12 @@ const DashboardTopbar: React.FC = () => {
           useUtilsCss
           padding=""
         >
-          <RoundedImgContainer width="50px">
+          <RoundedImgContainer width="50px" bgColor="white">
             <SquareImg src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" />
           </RoundedImgContainer>
-  
+
           <Container useUtilsCss padding="0 0 0 1rem">
-            <Header2 fontSize="0.8rem">Terry Stacia</Header2>
+            <Text fontSize="0.8rem">Terry Stacia</Text>
             <GrayText fontSize="0.65rem" useUtilsCss padding="0.5rem 0 0 0">
               MU Bwoey
             </GrayText>

@@ -9,6 +9,7 @@ export const theme: DefaultTheme = {
     gray1: "#292929",
     gray2: "#242424",
     gray3: "#656565",
+    gray4: "#5a5a5a",
     red: "#E72641",
     green: "#72F030",
     yellow: "#FFC62E",
@@ -31,4 +32,6 @@ export const GlobalStyle = createGlobalStyle`
 export const commonStyles = css<CommonCompProps>`
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
+  width: ${(props) => props.width};
+  text-align: ${(props) => props.textAlign};
 `;

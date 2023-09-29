@@ -6,7 +6,7 @@ type MenuItemProps = {
 
 export const Sidebar = styled.section`
   width: 25%;
-  height: 100vh;
+  min-height: 100%;
   padding: 2rem 1rem;
   background-color: ${(props) => props.theme.colors.black1};
 `

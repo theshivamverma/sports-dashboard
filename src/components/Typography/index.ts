@@ -1,1 +1,1 @@
-export {Header1, Header2, CustomHeader2, GrayText} from "./Typography.styles"
+export { Header1, Text, CustomText, GrayText } from "./Typography.styles";

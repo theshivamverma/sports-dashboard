@@ -10,7 +10,7 @@ import {
   RoundedImgContainer,
   SubItemsContainer,
 } from "../Container";
-import { CustomHeader2, GrayText, Header2 } from "../Typography";
+import { CustomText, GrayText, Text } from "../Typography";
 import { SidebarOptions } from "../../utils/constant";
 import { ChevronDown, Heart, Logout, Support } from "../../assets/icons";
 import { useDashboard } from "../../context";
@@ -19,12 +19,10 @@ const DashboardSidebar: React.FC = () => {
   const { activeMenuItem, setActiveMenuItem } = useDashboard();
 
   const menuClickHandler = (id: string) => {
-    if(id && id !== activeMenuItem) {
-      setActiveMenuItem(id)
-    }else {
-      setActiveMenuItem("")
+    if (id && id !== activeMenuItem) {
+      setActiveMenuItem(id);
     }
-  }
+  };
 
   return (
     <Sidebar>
@@ -32,9 +30,9 @@ const DashboardSidebar: React.FC = () => {
         <CustomSizeContainer width="30px" height="30px">
           <SquareImg src={dashboardLogo} />
         </CustomSizeContainer>
-        <Header2 useUtilsCss margin="0 0 0 0.5rem" fontSize="1.2rem">
+        <Text useUtilsCss margin="0 0 0 0.5rem" fontSize="1.2rem">
           Sportia
-        </Header2>
+        </Text>
       </FlexContainer>
       <GrayText useUtilsCss={true} margin="3rem 0 1rem 1rem" fontSize="0.8rem">
         Sports
@@ -51,9 +49,9 @@ const DashboardSidebar: React.FC = () => {
                 >
                   <FlexContainer alignItems="center">
                     {isSelected ? <PrimaryIcon /> : <SecondaryIcon />}
-                    <Header2 useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
+                    <Text useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
                       {label}
-                    </Header2>
+                    </Text>
                   </FlexContainer>
                   <IconContainer isActive={isSelected}>
                     <ChevronDown />
@@ -67,16 +65,16 @@ const DashboardSidebar: React.FC = () => {
                         padding="1rem"
                         alignItems="center"
                       >
-                        <RoundedImgContainer width="30px" height="30px">
+                        <RoundedImgContainer width="30px" height="30px" bgColor="white">
                           <SquareContainedImg src={icon} />
                         </RoundedImgContainer>
-                        <Header2
+                        <Text
                           useUtilsCss
                           padding="0 0 0 0.5rem"
                           fontSize="1rem"
                         >
                           {label}
-                        </Header2>
+                        </Text>
                       </FlexContainer>
                     ))}
                 </SubItemsContainer>
@@ -91,28 +89,28 @@ const DashboardSidebar: React.FC = () => {
         </GrayText>
         <FlexContainer alignItems="center" padding="1rem 1.5rem">
           <Heart />
-          <Header2 useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
+          <Text useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
             Favorites
-          </Header2>
+          </Text>
         </FlexContainer>
         <FlexContainer alignItems="center" padding="1rem 1.5rem">
           <Support />
-          <Header2 useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
+          <Text useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
             Support
-          </Header2>
+          </Text>
         </FlexContainer>
       </Container>
       <Container>
         <FlexContainer alignItems="center" padding="1rem 1.5rem">
           <Logout color="#E72641" />
-          <CustomHeader2
+          <CustomText
             useUtilsCss
             padding="0 0 0 0.5rem"
             fontSize="1rem"
             color="#E72641"
           >
             Logout
-          </CustomHeader2>
+          </CustomText>
         </FlexContainer>
       </Container>
     </Sidebar>

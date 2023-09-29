@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { CommonCompProps } from "../../utils/types";
 import { commonStyles } from "../../styles";
 
-type FlexContainerProps = {
+type FlexContainerProps = CommonCompProps & {
   padding?: string;
+  margin?: string;
   bgColor?: string;
   justify?: string;
   alignItems?: string;
@@ -13,6 +14,7 @@ type FlexContainerProps = {
 type CustomSizeProps = CommonCompProps & {
   width?: string;
   height?: string;
+  bgColor?: string;
 }
 
 type ContainerProps = CommonCompProps & {}
@@ -20,16 +22,7 @@ type ContainerProps = CommonCompProps & {}
 export const DashboardContainer = styled.main`
   display: flex;
   width: 100%;
-  height: 100vh;
-`
-
-export const FlexContainer = styled.div<FlexContainerProps>`
-  display: flex;
-  padding: ${(props) => props.padding};
-  border-radius: ${(props) => props.borderRadius};
-  background-color: ${(props) => props.bgColor};
-  justify-content: ${(props) => props.justify};
-  align-items: ${(props) => props.alignItems};
+  min-height: 100vh;
 `
 
 export const Container = styled.div<ContainerProps>`
@@ -38,8 +31,20 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const CustomSizeContainer = styled.div<CustomSizeProps>`
+  ${(props) => props.useUtilsCss && commonStyles};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
+`;
+
+export const FlexContainer = styled.div<FlexContainerProps>`
+  width: 100%;
+  display: flex;
+  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin};
+  border-radius: ${(props) => props.borderRadius};
+  background-color: ${(props) => props.bgColor};
+  justify-content: ${(props) => props.justify};
+  align-items: ${(props) => props.alignItems};
 `;
 
 export const CustomSizeFlexContainer = styled(FlexContainer)<CustomSizeProps>`
@@ -51,7 +56,7 @@ export const CustomSizeFlexContainer = styled(FlexContainer)<CustomSizeProps>`
 export const RoundedImgContainer = styled(CustomSizeContainer)`
   border-radius: 50%;
   overflow: hidden;
-  background-color: white;
+  background-color: ${(props) => props.bgColor};
 `
 
 export const IconContainer = styled.div<{ isActive: boolean }>`
@@ -67,6 +72,14 @@ export const RoundIconContainer = styled.div<CustomSizeProps>`
   justify-content: center;
   align-items: center;
   position: relative;
+`;
+
+export const RoundIconFilledContainer = styled(RoundIconContainer)<{
+  bgColor?: string;
+}>`
+  ${(props) => props.useUtilsCss && commonStyles};
+  border: none;
+  background-color: ${(props) => props.bgColor};
 `;
 
 export const Badge = styled.span`
