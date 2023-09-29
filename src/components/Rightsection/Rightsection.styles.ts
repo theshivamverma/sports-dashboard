@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { CommonCompProps } from "../../utils/types";
+import { commonStyles } from "../../styles";
 
 export const RightSection = styled.section`
   width: 75%;
@@ -32,14 +34,14 @@ export const Banner = styled.div`
 export const TodaysMatch = styled.div`
   background-color: ${(props) => props.theme.colors.black1};
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1.5rem 1rem;
 `;
 
 export const MatchContainer = styled.div`
   padding: 0.5rem;
   border-radius: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   border: 1px solid ${(props) => props.theme.colors.gray2}
 `;
 
@@ -51,12 +53,27 @@ export const MatchItem = styled.div<{ withBottomBorder: boolean }>`
   border-bottom: ${(props) => props.withBottomBorder ? `1px solid ${props.theme.colors.gray2}` : 'none'}
 `
 
-export const ScorePill = styled.div`
+export const ScorePill = styled.span<CommonCompProps>`
   padding: 0.3rem 0.5rem;
   min-width: 60px;
   border-radius: 1rem;
-  background-color: ${(props) => props.theme.colors.gray1};
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.colors.gray1};
+  ${(props) => props.useUtilsCss && commonStyles};
+`;
+
+export const LiveMatchDetails = styled.div`
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  background-color: ${(props) => props.theme.colors.black1};
+`
+
+export const Articles = styled.div`
+  border-radius: 1rem;
+  background-color: ${(props) => props.theme.colors.black1};
+  padding: 1.5rem;
+  margin-top: 2rem;
 `

@@ -12,6 +12,8 @@ export type CommonCompProps = {
   margin?: string;
   width?: string;
   textAlign?: string;
+  fontSize?: string;
+  borderRadius?: string;
 }
 
 export type Options = {
@@ -28,18 +30,28 @@ export type Options = {
 
 export type Match = {
   [key: string]: {
-    leagueName: string;
-    description: string;
-    leagueLogo: string;
-    matchData: {
+    todaysMatch: {
+      leagueName: string;
+      description: string;
+      leagueLogo: string;
+      matchData: {
+        id: string;
+        index: string;
+        indexColor: string;
+        team1Name: string;
+        team1Logo: string;
+        team2Name: string;
+        team2Logo: string;
+        score: string;
+      }[];
+    }[];
+    liveMatch: {
       id: string;
-      index: string;
-      indexColor: string;
       team1Name: string;
       team1Logo: string;
       team2Name: string;
       team2Logo: string;
       score: string;
-    }[];
-  }[];
+    };
+  };
 };

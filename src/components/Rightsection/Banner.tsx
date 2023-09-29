@@ -12,22 +12,43 @@ const DashboardBanner: React.FC = () => {
       <CustomText fontSize="1.5rem" fontWeight={500}>
         Manchester City Vs Arsenal
       </CustomText>
-      <CustomSizeFlexContainer useUtilsCss margin="1rem 0 0 0" alignItems="center" padding="0.5rem 0">
+      <CustomSizeFlexContainer
+        useUtilsCss
+        margin="1rem 0 0 0"
+        alignItems="center"
+        padding="0.5rem 0"
+      >
         <Calendar />
-        <Text useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
+        <CustomText
+          useUtilsCss
+          padding="0 0 0 0.5rem"
+          fontSize="1rem"
+          fontWeight={300}
+        >
           10 January, 2022
-        </Text>
+        </CustomText>
       </CustomSizeFlexContainer>
       <FlexContainer alignItems="center" padding="0.5rem 0">
         <Stadium />
-        <Text useUtilsCss padding="0 0 0 0.5rem" fontSize="1rem">
+        <CustomText
+          useUtilsCss
+          padding="0 0 0 0.5rem"
+          fontSize="1rem"
+          fontWeight={300}
+        >
           Old Trafford Stadium
-        </Text>
+        </CustomText>
       </FlexContainer>
       <CustomSizeContainer useUtilsCss margin="1rem 0 0 0">
         <SecondaryButton>
           Get a Ticket
-          <RoundIconFilledContainer useUtilsCss width="20px" height="20px" bgColor="#9567b1" margin="0 0 0 0.5rem">
+          <RoundIconFilledContainer
+            useUtilsCss
+            width="20px"
+            height="20px"
+            bgColor="#9567b1"
+            margin="0 0 0 0.5rem"
+          >
             <ArrowRight size={12} />
           </RoundIconFilledContainer>
         </SecondaryButton>

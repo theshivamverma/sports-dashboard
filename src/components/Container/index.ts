@@ -5,6 +5,7 @@ export {
   SubItemsContainer,
   CustomSizeContainer,
   RoundedImgContainer,
+  SquircleImgContainer,
   IconContainer,
   RoundIconContainer,
   CustomSizeFlexContainer,

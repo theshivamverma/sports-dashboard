@@ -21,7 +21,7 @@ const DashboardTodaysMatch: React.FC = () => {
   const { activeMenuItem } = useDashboard();
   const { localValues, updateData } = useLocalStorage();
 
-  const todaysMatchData = MatchData[activeMenuItem] ?? MatchData["111"];
+  const todaysMatchData = MatchData[activeMenuItem]?.todaysMatch ?? MatchData["111"]["todaysMatch"];
 
   const favoriteMatches = localValues["favMatches"] ?? [];
 

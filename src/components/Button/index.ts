@@ -1,1 +1,1 @@
-export { SecondaryButton, IconButton } from "./Button.styles"
+export { PrimaryButton, SecondaryButton, IconButton } from "./Button.styles"

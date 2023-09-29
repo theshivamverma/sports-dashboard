@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
 export const commonStyles = css<CommonCompProps>`
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
+  font-size: ${(props) => props.fontSize};
   width: ${(props) => props.width};
   text-align: ${(props) => props.textAlign};
+  border-radius: ${(props) => props.borderRadius};
 `;

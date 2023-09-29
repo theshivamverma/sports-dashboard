@@ -9,6 +9,7 @@ type FlexContainerProps = CommonCompProps & {
   justify?: string;
   alignItems?: string;
   borderRadius?: string;
+  flexDirection?: string;
 }
 
 type CustomSizeProps = CommonCompProps & {
@@ -45,6 +46,7 @@ export const FlexContainer = styled.div<FlexContainerProps>`
   background-color: ${(props) => props.bgColor};
   justify-content: ${(props) => props.justify};
   align-items: ${(props) => props.alignItems};
+  flex-direction: ${(props) => props.flexDirection ? props.flexDirection : 'row'};
 `;
 
 export const CustomSizeFlexContainer = styled(FlexContainer)<CustomSizeProps>`
@@ -58,6 +60,12 @@ export const RoundedImgContainer = styled(CustomSizeContainer)`
   overflow: hidden;
   background-color: ${(props) => props.bgColor};
 `
+
+export const SquircleImgContainer = styled(CustomSizeContainer)`
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: ${(props) => props.bgColor};
+`;
 
 export const IconContainer = styled.div<{ isActive: boolean }>`
   transform: rotate(${(props) => props.isActive ? '180deg' : '0deg'});
